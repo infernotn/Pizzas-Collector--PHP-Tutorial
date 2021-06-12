@@ -1,8 +1,16 @@
+<?php
+session_start();
+$userName=$_SESSION['name'];
+?>
+
 <head>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 <style type="text/css">
+body{
+    height:100vh;
 
+}
 .brand{
     background: #cbb09c !important;
     color: white !important;
@@ -33,6 +41,10 @@ form{
 
     margin: 0 0 5px 0%;
 }
+
+.img{
+    width:5em;
+}
 </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -45,6 +57,7 @@ form{
 
 <a class=" brand-text left" href="index.php">Pizzas collector</a>
 <ul class="right hide-on-small-and-down">
+<li class='black-text'> Hello : <?php echo htmlspecialchars($userName); ?> </li>
 <li><a href="add.php" class=" btn  brand z-depth-0"> ADD a Pizza</a></li>
 </ul>
 
